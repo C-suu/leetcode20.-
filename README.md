@@ -79,7 +79,11 @@ class Solution:
                 return False  
                 
         # 步骤 5: 遍历结束。如果栈为空 (not st 为 True)，说明全匹配；若不为空，说明左括号有剩余
-        return not st  
+        return not st
+        # 逻辑非操作符 not 会将布尔值反转：
+        # 如果 st 是空列表 []（False），那么 not st 的结果就是 True。
+        # 如果 st 是非空列表（True），那么 not st 的结果就是 False。
+        # return not st 就是在检查“有没有多余的左括号没被闭合”，如果全闭合了（栈空），就返回 True，否则返回 False。
 ```
 
 -----
